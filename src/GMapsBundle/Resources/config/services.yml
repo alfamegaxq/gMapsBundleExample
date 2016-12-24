@@ -1,0 +1,7 @@
+parameters:
+    autosuggest.service.class: 'GMapsBundle\Service\AutoSuggestService'
+
+services:
+    city_suggest:
+        class: '%autosuggest.service.class%'
+        arguments: ["%google_places_key%"]

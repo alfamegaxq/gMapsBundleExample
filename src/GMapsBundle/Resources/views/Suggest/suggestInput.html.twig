@@ -1,0 +1,50 @@
+{#<style>#}
+    {#/*styles to delte*/#}
+    {#body {#}
+        {#height: 2000px;#}
+    {#}#}
+
+
+    {#.suggestions-wrapper li.active {#}
+        {#background-color: #eee;#}
+    {#}#}
+    {#.suggestions-wrapper li {#}
+        {#list-style-type: none;#}
+        {#padding-top: 3px;#}
+        {#padding-bottom: 3px;#}
+        {#font-size: 16px;#}
+    {#}#}
+    {#.suggestions-wrapper li a{#}
+        {#padding-left: 5px;#}
+    {#}#}
+    {#.suggestions-wrapper li a:before{#}
+        {#content: '';#}
+        {#width: 15px;#}
+        {#margin-right: 5px;#}
+        {#height: 20px;#}
+        {#display: inline-block;#}
+        {#vertical-align: top;#}
+        {#background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);#}
+        {#background-size: 34px;#}
+        {#background-position-y: 100px;#}
+    {#}#}
+    {#.suggestions-wrapper {#}
+        {#border-left: 1px solid #aaa;#}
+        {#border-right: 1px solid #aaa;#}
+        {#width: 100%;#}
+        {#border-bottom: 1px solid #aaa;#}
+        {#-webkit-box-shadow: -1px 6px 25px -3px rgba(194,194,194,1);#}
+        {#-moz-box-shadow: -1px 6px 25px -3px rgba(194,194,194,1);#}
+        {#box-shadow: -1px 6px 25px -3px rgba(194,194,194,1);#}
+    {#}#}
+    {#.city-suggest-wrapper input {#}
+        {#width: 100%;#}
+    {#}#}
+    {##}
+{#</style>#}
+<div class="form-control city-suggest-wrapper">
+    <div class="suggest-box" data-suggest-country="{{ country }}" data-suggest-language="{{ language }}" data-suggest-url="{{ path('suggest_city') }}">
+        <input type="text" {{ inputParams|raw }} >
+        {#<div style="display:none;" class="js-suggestions-wrapper suggestions-wrapper" data-suggest-country="{{ country }}" data-suggest-language="{{ language }}" data-suggest-url="{{ path('suggest_city') }}"></div>#}
+    </div>
+</div>
